@@ -397,6 +397,8 @@ public class Specs {
 		
 		// More
 		["goto url %s",							" ", 13, "gotoUrl", "http://scratch.mit.edu"],
+		["true",								"r", 13, "returnTrue"],
+		["false", 								"r", 13, "returnFalse"],
 
 	];
 

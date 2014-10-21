@@ -80,6 +80,8 @@ public class Primitives {
 		
 		// More
 		primTable["gotoUrl"]			= function(b:*):* { app.requestURL(interp.arg(b, 0)); };
+		primTable["returnTrue"]			= function(b:*):* {	return true; };
+		primTable["returnFalse"]		= function(b:*):* { return false; };
 
 		new LooksPrims(app, interp).addPrimsTo(primTable);
 		new MotionAndPenPrims(app, interp).addPrimsTo(primTable);
