@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<application xmlns="http://ns.adobe.com/air/application/3.8">
+	<id>com.elfin8er.csm</id>
+	<versionNumber>0.0.1</versionNumber>
+	<filename>CSM - Based On Scratch</filename>
+	<initialWindow>
+		<content>Scratch.swf</content>
+		<fullScreen>true</fullScreen>
+	</initialWindow>
+	<supportedProfiles>mobileDevice</supportedProfiles>
+</application>
