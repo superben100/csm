@@ -318,12 +318,14 @@ public class Specs {
 		["current %m.timeAndDate", 				"r", 107, "timeAndDate",		"minute"],
 		["days since 2000", 					"r", 107, "timestamp"],
 		["username",							"r", 107, "getUserName"],
+		["-"],
 
 		// operators
 		["%n + %n",								"r", 8, "+",					"", ""],
 		["%n - %n",								"r", 8, "-",					"", ""],
 		["%n * %n",								"r", 8, "*",					"", ""],
 		["%n / %n",								"r", 8, "/",					"", ""],
+		["%n ^ %n",								"r", 8, "^",					"", ""],
 		["-"],
 		["pick random %n to %n",		"r", 8, "randomFrom:to:",		1, 10],
 		["-"],
