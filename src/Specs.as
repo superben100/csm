@@ -72,6 +72,7 @@ public class Specs {
 		[10, "More Blocks",	procedureColor],
 		[11, "Parameter",	parameterColor],
 		[12, "List",		listColor],
+		[13, "More",        0x66FFCC], //Right now, all custom blocks are in one category. Use MorePrims for this category.
 		[20, "Extension",	extensionsColor],
 	];
 
@@ -393,6 +394,8 @@ public class Specs {
 		// other obsolete blocks from alpha/beta
 		["hide all sprites",					" ", 99, "hideAll"],
 		["user id",								"r", 99, "getUserId"],
+		
+		// More
 
 	];
 
