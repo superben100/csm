@@ -67,10 +67,12 @@ public class LooksPrims {
 
 		primTable['show']					= primShow;
 		primTable['hide']					= primHide;
+		primTable['visible']				= primVisible;
 //		primTable['hideAll']				= primHideAll;
 
 		primTable['comeToFront']			= primGoFront;
 		primTable['goBackByLayers:']		= primGoBack;
+		primTable['layer']					= layer;
 
 		primTable['setVideoState']			= primSetVideoState;
 		primTable['setVideoTransparency']	= primSetVideoTransparency;
@@ -261,6 +263,11 @@ public class LooksPrims {
 		s.updateBubble();
 		interp.redraw();
 	}
+	
+	private function primVisible(b:Block):Boolean {
+		var s:ScratchSprite = interp.targetSprite();
+		return s.visible
+	}
 
 	private function primHideAll(b:Block):void {
 		// Hide all sprites and delete all clones. Only works from the stage.
@@ -293,6 +300,11 @@ public class LooksPrims {
 			s.parent.setChildIndex(s, newIndex);
 			if (s.visible) interp.redraw();
 		}
+	}
+	
+	private function layer(b:Block):Number {
+		var s:ScratchSprite = interp.targetSprite();
+		return s.parent.getChildIndex(s) - 2
 	}
 
 	private function minSpriteLayer():int {
