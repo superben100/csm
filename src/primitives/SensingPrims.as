@@ -234,7 +234,6 @@ public class SensingPrims {
 		if (key == 'backspace') ch = 8;
 		if (key == 'tab') ch = 9;
 		if (key == 'enter') ch = 13;
-		if (key == 'caps lock') ch = 20;
 		if (key == 'escape') ch = 27;
 		
 		return app.runtime.keyIsDown[ch];
