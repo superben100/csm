@@ -192,6 +192,12 @@ public class ScratchRuntime {
 		if (30 == ch) keyName = 'up arrow';
 		if (31 == ch) keyName = 'down arrow';
 		if (32 == ch) keyName = 'space';
+		
+		if (8 == ch) keyName = 'backspace';
+		if (9 == ch) keyName = 'tab';
+		if (13 == ch) keyName = 'enter';
+		if (27 == ch) keyName = 'escape';
+		
 		if (keyName == null) return;
 		var startMatchingKeyHats:Function = function (stack:Block, target:ScratchObj):void {
 			if ((stack.op == 'whenKeyPressed') && (stack.args[0].argValue == keyName)) {

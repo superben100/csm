@@ -29,6 +29,7 @@ package primitives {
 	import blocks.Block;
 	import interpreter.*;
 	import scratch.*;
+	import flash.ui.Keyboard;
 
 public class SensingPrims {
 
