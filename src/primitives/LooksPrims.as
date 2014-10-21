@@ -82,6 +82,7 @@ public class LooksPrims {
 //		primTable['yScroll']				= function(b:*):* { return app.stagePane.yScroll };
 
 		primTable['setRotationStyle']		= primSetRotationStyle;
+		primTable['getRotationStyle']		= primGetRotationStyle;
 	}
 
 	private function primNextCostume(b:Block):void {
@@ -223,6 +224,11 @@ public class LooksPrims {
 		var newStyle:String = interp.arg(b, 0) as String;
 		if ((s == null) || (newStyle == null)) return;
 		s.setRotationStyle(newStyle);
+	}
+	
+	private function primGetRotationStyle(b:Block):String {
+		var s:ScratchSprite = interp.targetSprite();
+		return (s != null) ? s.rotationStyle : "null";
 	}
 
 	private function primSetSize(b:Block):void {
