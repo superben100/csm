@@ -396,6 +396,7 @@ public class Specs {
 		["user id",								"r", 99, "getUserId"],
 		
 		// More
+		["goto url %s",							" ", 13, "gotoUrl", "http://scratch.mit.edu"],
 
 	];
 
