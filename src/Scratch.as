@@ -1222,6 +1222,6 @@ public class Scratch extends Sprite {
 		function navigate():void {
 			navigateToURL(new URLRequest(urlNav), "_blank");
 		}
-		DialogBox.confirm("Would you like to navigate to " + urlNav + "?", stage, navigate)
+		DialogBox.confirm("Would you like to navigate to " + urlNav + "?", stage, navigate, null)
 	}
 }}
