@@ -1,5 +1,4 @@
-##Based Off Scratch By MIT
-This is a modification of Scratch by MIT. More information about Scratch can be found at http://scratch.mit.edu.
+##Based off Scratch from MIT Media lab
+scratch.mit.edu
 
-##Scratch Community Mod
-SCM is a Scratch mod made, and managed by the Scratch community. More information can be found at http://scratch.mit.edu/discuss/topic/59448/ .
+This is CSM, a community managed Scratch mod. I, ChocolatePi, are contributing some blocks to it.
