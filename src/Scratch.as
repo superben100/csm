@@ -767,6 +767,8 @@ public class Scratch extends Sprite {
 		var m:Menu = new Menu(null, 'More', CSS.topBarColor, 28);
 		m.addItem('About CSM', aboutCSM, true);
 		m.addItem('Source Code', sourceCode, true);
+		m.addItem('Forum Post', forumPost, true);
+		m.addItem('Scratch', scratchLink, true);
 		var p:Point = b.localToGlobal(new Point(0,0));
 		m.showOnStage(stage, b.x, topBarPart.bottom() - 1);
 	}
@@ -782,6 +784,15 @@ public class Scratch extends Sprite {
 	protected function sourceCode():void {
 		requestURL("https://github.com/elfin8er/csm");
 	}
+	
+	protected function forumPost():void {
+		requestURL("http://scratch.mit.edu/discuss/topic/59448/");
+	}
+	
+	protected function scratchLink():void {
+		requestURL("http://scratch.mit.edu");
+	}
+	
 
 	protected function editBlockColors():void {
 		var d:DialogBox = new DialogBox();
