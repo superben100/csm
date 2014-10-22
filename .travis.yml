@@ -6,3 +6,12 @@ cache:
     - node_modules
 before_script:
   - npm install flex-sdk
+
+deploy:
+  provider: releases
+  api-key: oauth
+  file: "ocm.swf"
+  skip_cleanup: true
+  on:
+    tags: true
+    all_branches: true
