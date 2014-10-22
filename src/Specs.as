@@ -412,6 +412,10 @@ public class Specs {
 		["goto url %s",							" ", 13, "gotoUrl", "http://scratch.mit.edu"],
 		["true",								"r", 13, "returnTrue"],
 		["false", 								"r", 13, "returnFalse"],
+		["stage width %n",						" ", 13, "stageWidth",		480],
+		["stage height %n",						" ", 13, "stageHeight",		360],
+		["screen width",						"r", 13, "screenWidth"],
+		["screen height",						"r", 13, "screenHeight"],
 		
 	
 	];

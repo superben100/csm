@@ -88,6 +88,10 @@ public class Primitives {
 		primTable["deleteVar"]			= function(b:*):* { app.viewedObj().deleteVar(interp.arg(b, 0)) };
 		primTable["lookup"]				= function(b:*):* { return app.viewedObj().lookupVar(interp.arg(b, 0)) };
 		primTable["getVariableValue"]	= function(b:*):* { return app.viewedObj().lookupVar(interp.arg(b, 0)).value };
+		primTable["stageWidth"]			= function(b:*):* { app.stageWidth = interp.arg(b, 0) };
+		primTable["stageHeight"]		= function(b:*):* { app.stageHeight = interp.arg(b, 0) };
+		primTable["screenWidth"]		= function(b:*):* { return app.stage.stageWidth };
+		primTable["screenHeight"]		= function(b:*):* { return app.stage.stageHeight - 48 };
 
 		new LooksPrims(app, interp).addPrimsTo(primTable);
 		new MotionAndPenPrims(app, interp).addPrimsTo(primTable);

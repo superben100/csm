@@ -112,6 +112,10 @@ public class Scratch extends Sprite {
 	public var imagesPart:ImagesPart;
 	public var soundsPart:SoundsPart;
 	public const tipsBarClosedWidth:int = 17;
+	
+	// Resolution of the stage in full-screen mode
+	public var stageWidth:Number = 1280;
+	public var stageHeight:Number = 720;
 
 	public function Scratch() {
 		loaderInfo.uncaughtErrorEvents.addEventListener(UncaughtErrorEvent.UNCAUGHT_ERROR, uncaughtErrorHandler);
@@ -627,13 +631,13 @@ public class Scratch extends Sprite {
 			fixLoadProgressLayout();
 		} else {
 			drawBG();
-			var pad:int = (w > 550) ? 16 : 0; // add padding for full-screen mode
-			var scale:Number = Math.min((w - extraW - pad) / 480, (h - extraH - pad) / 360);
+			//var pad:int = (w > 550) ? 16 : 0; // add padding for full-screen mode
+			var scale:Number = Math.min((w - extraW) / stageWidth, (h - extraH) / stageHeight);
 			scale = Math.max(0.01, scale);
-			var scaledW:int = Math.floor((scale * 480) / 4) * 4; // round down to a multiple of 4
-			scale = scaledW / 480;
-			var playerW:Number = (scale * 480) + extraW;
-			var playerH:Number = (scale * 360) + extraH;
+			var scaledW:int = Math.floor((scale * stageWidth) / 4) * 4; // round down to a multiple of 4
+			scale = scaledW / stageWidth;
+			var playerW:Number = (scale * stageWidth) + extraW;
+			var playerH:Number = (scale * stageHeight) + extraH;
 			stagePart.setWidthHeight(playerW, playerH, scale);
 			stagePart.x = int((w - playerW) / 2);
 			stagePart.y = int((h - playerH) / 2);
