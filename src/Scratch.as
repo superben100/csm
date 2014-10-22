@@ -38,6 +38,7 @@ import flash.net.LocalConnection;
 import flash.system.*;
 import flash.text.*;
 import flash.utils.*;
+import flash.net.*;
 
 import interpreter.*;
 
@@ -765,6 +766,7 @@ public class Scratch extends Sprite {
 	public function showAboutMenu(b:*):void { //Custom 'CSM' menu
 		var m:Menu = new Menu(null, 'More', CSS.topBarColor, 28);
 		m.addItem('About CSM', aboutCSM, true);
+		m.addItem('Source Code', sourceCode, true);
 		var p:Point = b.localToGlobal(new Point(0,0));
 		m.showOnStage(stage, b.x, topBarPart.bottom() - 1);
 	}
@@ -775,6 +777,10 @@ public class Scratch extends Sprite {
 			'Scratch: http://scratch.mit.edu' +
 			'\nCSM Info: http://scratch.mit.edu/discuss/topic/59448' +
 			'\nGithub: https://github.com/elfin8er/csm', stage);
+	}
+	
+	protected function sourceCode():void {
+		requestURL("https://github.com/elfin8er/csm");
 	}
 
 	protected function editBlockColors():void {
@@ -1206,5 +1212,16 @@ public class Scratch extends Sprite {
 
 	public function addExternalCallback(functionName:String, closure:Function):void {
 		throw new IllegalOperationError('Must override this function.');
+	}
+	
+	// ------------------
+	// Custom Functions
+	// ------------------
+	
+	public function requestURL(urlNav:String):void { // Asks the user if it's ok to navigate away from the current page
+		function navigate():void {
+			navigateToURL(new URLRequest(urlNav), "_blank");
+		}
+		DialogBox.confirm("Would you like to navigate to " + urlNav + "?", stage, navigate)
 	}
 }}
