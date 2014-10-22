@@ -761,6 +761,21 @@ public class Scratch extends Sprite {
 		m.addLine();
 		m.addItem('Edit block colors', editBlockColors);
 	}
+	
+	public function showAboutMenu(b:*):void { //Custom 'CSM' menu
+		var m:Menu = new Menu(null, 'More', CSS.topBarColor, 28);
+		m.addItem('About CSM', aboutCSM, true);
+		var p:Point = b.localToGlobal(new Point(0,0));
+		m.showOnStage(stage, b.x, topBarPart.bottom() - 1);
+	}
+	
+	protected function aboutCSM():void {		
+		DialogBox.notify(
+			'CSM Based on Scratch By MIT ',
+			'Scratch: http://scratch.mit.edu' +
+			'\nCSM Info: http://scratch.mit.edu/discuss/topic/59448' +
+			'\nGithub: https://github.com/elfin8er/csm', stage);
+	}
 
 	protected function editBlockColors():void {
 		var d:DialogBox = new DialogBox();
