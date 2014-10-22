@@ -6,6 +6,17 @@
 	<initialWindow>
 		<content>Scratch.swf</content>
 		<fullScreen>true</fullScreen>
+		<autoOrients>true</autoOrients>
 	</initialWindow>
 	<supportedProfiles>mobileDevice</supportedProfiles>
+	<iPhone>
+    <InfoAdditions><![CDATA[
+        <key>UIDeviceFamily</key>
+        <array>
+            <!-- iPhone support -->
+            <string>1</string>
+            <string>2</string>
+        </array>
+    ]]></InfoAdditions>
+</iPhone>
 </application>
