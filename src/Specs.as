@@ -385,9 +385,12 @@ public class Specs {
 		["counter",								"r", 99, "COUNT"],
 		["clear counter",						" ", 99, "CLR_COUNT"],
 		["incr counter",						" ", 99, "INCR_COUNT"],
-		["for each %m.varName in %s",			"c", 99, "doForLoop", "v", 10],
-		["while %b",							"c", 99, "doWhile"],
-		["all at once",							"c", 99, "warpSpeed"],
+		
+		// Enabled testing control prims
+		["-"],
+		["for each %m.var in %s",			"c", 6, "doForLoop", null, 10],
+		["while %b",							"c", 6, "doWhile"],
+		["all at once",							"c", 6, "warpSpeed"],
 
 		// stage motion (scrolling)
 		["scroll right %n",						" ", 99, "scrollRight",		10],

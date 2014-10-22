@@ -68,7 +68,7 @@ public class LooksPrims {
 		primTable['show']					= primShow;
 		primTable['hide']					= primHide;
 		primTable['visible']				= primVisible;
-//		primTable['hideAll']				= primHideAll;
+		primTable['hideAll']				= primHideAll;
 
 		primTable['comeToFront']			= primGoFront;
 		primTable['goBackByLayers:']		= primGoBack;
