@@ -27,7 +27,7 @@ package primitives {
 	import flash.utils.Dictionary;
 	import blocks.*;
 	import interpreter.*;
-	import scratch.ScratchSprite;
+	import scratch.*;
 	import translation.Translator;
 
 public class Primitives {
@@ -37,6 +37,7 @@ public class Primitives {
 	protected var app:Scratch;
 	protected var interp:Interpreter;
 	private var counter:int;
+	public var activeThread:Thread;
 
 	public function Primitives(app:Scratch, interpreter:Interpreter) {
 		this.app = app;
@@ -82,6 +83,11 @@ public class Primitives {
 		primTable["gotoUrl"]			= function(b:*):* { app.requestURL(interp.arg(b, 0)); };
 		primTable["returnTrue"]			= function(b:*):* {	return true; };
 		primTable["returnFalse"]		= function(b:*):* { return false; };
+		
+		primTable["createVar"]			= function(b:*):* {	app.viewedObj().lookupOrCreateVar(interp.arg(b, 0)) };
+		primTable["deleteVar"]			= function(b:*):* { app.viewedObj().deleteVar(interp.arg(b, 0)) };
+		primTable["lookup"]				= function(b:*):* { return app.viewedObj().lookupVar(interp.arg(b, 0)) };
+		primTable["getVariableValue"]	= function(b:*):* { return app.viewedObj().lookupVar(interp.arg(b, 0)).value };
 
 		new LooksPrims(app, interp).addPrimsTo(primTable);
 		new MotionAndPenPrims(app, interp).addPrimsTo(primTable);

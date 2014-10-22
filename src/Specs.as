@@ -347,6 +347,11 @@ public class Specs {
 		["%m.mathOp of %n",						"r", 8, "computeFunction:of:",	"sqrt", 9],
 
 		// variables
+		["create var %s",									" ", 9, "createVar", "var name"],
+		["delete var %s",									" ", 9, "deleteVar", "var name"],
+		["lookup var %s",									"r", 9, "lookup", "var name"],
+		["get variable value %s",							"r", 9, "getVariableValue", "var name"],
+		["="],
 		["set %m.var to %s",								" ", 9, SET_VAR],
 		["change %m.var by %n",								" ", 9, CHANGE_VAR],
 		["show variable %m.var",							" ", 9, "showVariable:"],
