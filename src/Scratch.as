@@ -170,6 +170,7 @@ public class Scratch extends Sprite {
 		//Analyze.collectAssets(0, 119110);
 		//Analyze.checkProjects(56086, 64220);
 		//Analyze.countMissingAssets();
+		
 	}
 
 	protected function initTopBarPart():void {

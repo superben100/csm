@@ -29,6 +29,12 @@ package primitives {
 	import interpreter.*;
 	import scratch.*;
 	import translation.Translator;
+	
+	import ui.*;
+	import ui.media.*;
+	import ui.parts.*;
+
+	import uiwidgets.*;
 
 public class Primitives {
 
@@ -92,6 +98,7 @@ public class Primitives {
 		primTable["stageHeight"]		= function(b:*):* { app.stageHeight = interp.arg(b, 0) };
 		primTable["screenWidth"]		= function(b:*):* { return app.stage.stageWidth };
 		primTable["screenHeight"]		= function(b:*):* { return app.stage.stageHeight - 48 };
+		primTable["getFPS"]				= function(b:*):* { return '' };
 
 		new LooksPrims(app, interp).addPrimsTo(primTable);
 		new MotionAndPenPrims(app, interp).addPrimsTo(primTable);

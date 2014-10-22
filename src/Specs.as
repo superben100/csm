@@ -294,6 +294,8 @@ public class Specs {
 		["current %m.timeAndDate", 				"r", 7, "timeAndDate",			"minute"],
 		["days since 2000", 					"r", 7, "timestamp"],
 		["username",							"r", 7, "getUserName"],
+		["-"],
+		["fps",									"r", 7, "getFPS"],
 
 		// stage sensing
 		["ask %s and wait",						" ", 107, "doAsk", 				"What's your name?"],
