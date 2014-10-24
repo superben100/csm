@@ -419,7 +419,6 @@ public class Specs {
 		["screen width",						"r", 13, "screenWidth"],
 		["screen height",						"r", 13, "screenHeight"],
 		//["%m.irrationalNumber",					"r", 13, "irrationalNumber"],
-		[
 		
 	
 	];
