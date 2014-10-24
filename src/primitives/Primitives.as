@@ -99,6 +99,8 @@ public class Primitives {
 		primTable["screenWidth"]		= function(b:*):* { return app.stage.stageWidth };
 		primTable["screenHeight"]		= function(b:*):* { return app.stage.stageHeight - 48 };
 		primTable["getFPS"]				= function(b:*):* { return '' };
+		primTable["fromXtoYofZ"]		= function(b:*):* {	return interp.arg(b, 2).substr(interp.numarg(b, 0), interp.numarg(b, 1))};
+		primTable["split"]				= function(b:*):* { return interp.arg(b,0).split(interp.arg(b,1)).join("") }; //Fix me!
 
 		new LooksPrims(app, interp).addPrimsTo(primTable);
 		new MotionAndPenPrims(app, interp).addPrimsTo(primTable);

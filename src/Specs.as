@@ -329,7 +329,7 @@ public class Specs {
 		["%n / %n",								"r", 8, "/",					"", ""],
 		["%n ^ %n",								"r", 8, "^",					"", ""],
 		["-"],
-		["pick random %n to %n",		"r", 8, "randomFrom:to:",		1, 10],
+		["pick random %n to %n",				"r", 8, "randomFrom:to:",		1, 10],
 		["-"],
 		["%s < %s",								"b", 8, "<",					"", ""],
 		["%s = %s",								"b", 8, "=",					"", ""],
@@ -342,6 +342,8 @@ public class Specs {
 		["join %s %s",							"r", 8, "concatenate:with:",	"hello ", "world"],
 		["letter %n of %s",						"r", 8, "letter:of:",			1, "world"],
 		["length of %s",						"r", 8, "stringLength:",		"world"],
+		["select %n - %n from %s",				"r", 8, "fromXtoYofZ",			"6", "5", "Hello World"],
+		["split %s up by %s",					"r", 8, "split",				"a,b,c", ","],
 		["-"],
 		["%n mod %n",							"r", 8, "%",					"", ""],
 		["round %n",							"r", 8, "rounded", 				""],
@@ -419,7 +421,6 @@ public class Specs {
 		["screen width",						"r", 13, "screenWidth"],
 		["screen height",						"r", 13, "screenHeight"],
 		//["%m.irrationalNumber",					"r", 13, "irrationalNumber"],
-		
 	
 	];
 
