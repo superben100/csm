@@ -254,6 +254,10 @@ public class Specs {
 		["while %b",							"c", 6, "doWhile"],
 		["all at once",							"c", 6, "warpSpeed"],
 		["forever if %b",						"cf",6, "doForeverIf"],
+		["-"],
+		["counter",								"r", 6, "COUNT"],
+		["clear counter",						" ", 6, "CLR_COUNT"],
+		["incr counter",						" ", 6, "INCR_COUNT"],
 
 		// control - stage
 		["wait %n secs",						" ", 106, "wait:elapsed:from:",	1],
@@ -269,11 +273,15 @@ public class Specs {
 		["stop %m.stop",						"f", 106, "stopScripts", "all"],
 		["-"],
 		["create clone of %m.spriteOnly",		" ", 106, "createCloneOf"],
-		"-"],
+		["-"],
 		["for each %m.var in %s",			"c", 106, "doForLoop", null, 10],
 		["while %b",							"c", 106, "doWhile"],
 		["all at once",							"c", 106, "warpSpeed"],
 		["forever if %b",						"cf", 106, "doForeverIf"],
+		["-"],
+		["counter",								"r", 106, "COUNT"],
+		["clear counter",						" ", 106, "CLR_COUNT"],
+		["incr counter",						" ", 106, "INCR_COUNT"],
 
 		// sensing
 		["touching %m.touching?",				"b", 7, "touching:",			""],
