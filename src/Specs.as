@@ -250,6 +250,10 @@ public class Specs {
 		["create clone of %m.spriteOnly",		" ", 6, "createCloneOf"],
 		["delete this clone",					"f", 6, "deleteClone"],
 		["-"],
+		["for each %m.var in %s",			"c", 6, "doForLoop", null, 10],
+		["while %b",							"c", 6, "doWhile"],
+		["all at once",							"c", 6, "warpSpeed"],
+		["forever if %b",						"cf",6, "doForeverIf"],
 
 		// control - stage
 		["wait %n secs",						" ", 106, "wait:elapsed:from:",	1],
@@ -265,6 +269,11 @@ public class Specs {
 		["stop %m.stop",						"f", 106, "stopScripts", "all"],
 		["-"],
 		["create clone of %m.spriteOnly",		" ", 106, "createCloneOf"],
+		"-"],
+		["for each %m.var in %s",			"c", 6, "doForLoop", null, 10],
+		["while %b",							"c", 6, "doWhile"],
+		["all at once",							"c", 6, "warpSpeed"],
+		["forever if %b",						"cf",6, "doForeverIf"],
 
 		// sensing
 		["touching %m.touching?",				"b", 7, "touching:",			""],
