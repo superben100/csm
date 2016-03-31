@@ -437,6 +437,7 @@ public class Specs {
 		["stage height %n",						" ", 13, "stageHeight",		360],
 		["screen width",						"r", 13, "screenWidth"],
 		["screen height",						"r", 13, "screenHeight"],
+		["comment %s",							"lol", 13, "comment"],
 		//["%m.irrationalNumber",					"r", 13, "irrationalNumber"],
 	
 	];
